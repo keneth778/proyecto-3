@@ -9,8 +9,10 @@ export function producto(prod) {
             <img src="${prod.imagen || 'X'}" alt="${prod.nombre}">
         </div>
         <h3>${prod.nombre}</h3>
-        <p>$${prod.precio.toFixed(2)}</p>
-        <button class="btn-eliminar">Eliminar</button>
+        <div class="precio-y-boton">
+            <p>$${prod.precio.toFixed(2)}</p>
+            <button class="btn-agregar">Agregar</button>
+        </div>
     `;
 
     return item;

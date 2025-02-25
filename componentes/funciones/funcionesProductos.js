@@ -2,26 +2,28 @@
 export function resaltarProducto(id) {
     const producto = document.querySelector(`.producto[data-id="${id}"]`);
     if (producto) {
-        producto.classList.toggle('resaltado'); // Alternar la clase 'resaltado'
-        actualizarContador(); // Llamar a la función para actualizar el contador
+        producto.classList.toggle('resaltado');
+        actualizarContador();
     }
 }
 
-export function eliminarProducto(id) {
-    const producto = document.querySelector(`.producto[data-id="${id}"]`);
-    if (producto) {
-        producto.remove(); // Eliminar el producto del DOM
-        actualizarContador(); // Llamar a la función para actualizar el contador
+export function agregarAlCarrito() {
+    contadorCarrito++; // Aumentar el contador
+    actualizarContador(); // Actualizar el contador en la interfaz
+}
+
+let contadorCarrito = 0; // Variable para almacenar el número de productos en el carrito
+
+function actualizarContador() {
+    const contador = document.getElementById('contador-productos');
+    if (contador) {
+        contador.textContent = `Productos en el carrito: ${contadorCarrito}`;
     }
 }
 
-
-
-// Asignar evento de eliminar a los botones
+// Asignar eventos al botón "Agregar"
 document.addEventListener('click', (event) => {
-    if (event.target.classList.contains('btn-eliminar')) {
-        const producto = event.target.closest('.producto');
-        const id = producto.getAttribute('data-id');
-        eliminarProducto(id);
+    if (event.target.classList.contains('btn-agregar')) {
+        agregarAlCarrito(); // Aumentar el contador al hacer clic en "Agregar"
     }
 });

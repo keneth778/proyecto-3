@@ -1,5 +1,4 @@
-// data.js
-export const productos = [
+export const dataProductos = [
     { id: 1, nombre: "Producto 1", precio: 10.99, imagen: "X" },
     { id: 2, nombre: "Producto 2", precio: 15.99, imagen: "img2.jpg" },
     { id: 3, nombre: "Producto 3", precio: 20.99, imagen: "img3.jpg" },

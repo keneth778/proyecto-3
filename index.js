@@ -13,7 +13,7 @@ function iniciarApp() {
     let header = document.createElement('header');
     header.innerHTML = `
         <h1>Mi Tienda</h1>
-        <div id="contador-productos"></div>
+        <div id="contador-productos">Productos en el carrito: 0</div>
     `;
     contenedor.appendChild(header);
 
