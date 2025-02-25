@@ -15,14 +15,7 @@ export function eliminarProducto(id) {
     }
 }
 
-// Función para actualizar el contador
-function actualizarContador() {
-    const productosResaltados = document.querySelectorAll('.resaltado').length;
-    const contador = document.getElementById('contador-productos');
-    if (contador) {
-        contador.textContent = `Productos resaltados: ${productosResaltados}`;
-    }
-}
+
 
 // Asignar evento de eliminar a los botones
 document.addEventListener('click', (event) => {
